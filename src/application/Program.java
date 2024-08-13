@@ -33,5 +33,17 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());
 		
+		
+		System.out.println("Teste 4: testando a função update seller");
+		seller = sellerDao.findById(1);
+		seller.setName("Martha Waine");
+		sellerDao.update(seller);
+		System.out.println("Update completed! ;)");
+		
+		
+		System.out.println("Teste 5: testando a função delete seller");
+		sellerDao.deleteById(2);
+		System.out.println("Delete operation completed! ;)");
+		
 	}
 }
